@@ -20,6 +20,7 @@
 
 - (void)setDenominator:(int)d {
     denominator = d;
+    //adsadsad
 }
 
 - (float)getResults{
