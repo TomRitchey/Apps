@@ -50,9 +50,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A7525F431BC4144A0065D7A2 /* kurwajapierdole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = kurwajapierdole.app; path = "/Users/Yosemite/Documents/Xcode projects/24_days_tutorial/build/Debug-iphoneos/kurwajapierdole.app"; sourceTree = "<absolute>"; };
-		A7525F441BC4144A0065D7A2 /* kurwajapierdoleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = kurwajapierdoleTests.xctest; path = "/Users/Yosemite/Documents/Xcode projects/24_days_tutorial/build/Debug-iphoneos/kurwajapierdoleTests.xctest"; sourceTree = "<absolute>"; };
-		A7525F451BC4144A0065D7A2 /* kurwajapierdoleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = kurwajapierdoleUITests.xctest; path = "/Users/Yosemite/Documents/Xcode projects/24_days_tutorial/build/Debug-iphoneos/kurwajapierdoleUITests.xctest"; sourceTree = "<absolute>"; };
 		A7589E861BC3C6180058076F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A7589E881BC3C6180058076F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A7589E891BC3C6180058076F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -71,6 +68,9 @@
 		A7589F331BC3E41D0058076F /* 24_days_tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 24_days_tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7589F341BC3E41D0058076F /* 24_days_tutorialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 24_days_tutorialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7589F351BC3E41D0058076F /* 24_days_tutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 24_days_tutorialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7FA3B681BC5127400FB02EC /* kurwajapierdole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kurwajapierdole.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7FA3B691BC5127400FB02EC /* kurwajapierdoleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kurwajapierdoleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7FA3B6A1BC5127400FB02EC /* kurwajapierdoleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kurwajapierdoleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +128,9 @@
 				A7589F331BC3E41D0058076F /* 24_days_tutorial.app */,
 				A7589F341BC3E41D0058076F /* 24_days_tutorialTests.xctest */,
 				A7589F351BC3E41D0058076F /* 24_days_tutorialUITests.xctest */,
+				A7FA3B681BC5127400FB02EC /* kurwajapierdole.app */,
+				A7FA3B691BC5127400FB02EC /* kurwajapierdoleTests.xctest */,
+				A7FA3B6A1BC5127400FB02EC /* kurwajapierdoleUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -245,7 +248,7 @@
 			);
 			name = kurwajapierdole;
 			productName = kurwajapierdole;
-			productReference = A7525F431BC4144A0065D7A2 /* kurwajapierdole.app */;
+			productReference = A7FA3B681BC5127400FB02EC /* kurwajapierdole.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A7589F171BC3DDAE0058076F /* kurwajapierdoleTests */ = {
@@ -263,7 +266,7 @@
 			);
 			name = kurwajapierdoleTests;
 			productName = kurwajapierdoleTests;
-			productReference = A7525F441BC4144A0065D7A2 /* kurwajapierdoleTests.xctest */;
+			productReference = A7FA3B691BC5127400FB02EC /* kurwajapierdoleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		A7589F221BC3DDAF0058076F /* kurwajapierdoleUITests */ = {
@@ -281,7 +284,7 @@
 			);
 			name = kurwajapierdoleUITests;
 			productName = kurwajapierdoleUITests;
-			productReference = A7525F451BC4144A0065D7A2 /* kurwajapierdoleUITests.xctest */;
+			productReference = A7FA3B6A1BC5127400FB02EC /* kurwajapierdoleUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -574,7 +577,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				INFOPLIST_FILE = 24_days_tutorial/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "s.-4-days-tutorial";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -587,7 +590,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				INFOPLIST_FILE = 24_days_tutorial/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "s.-4-days-tutorial";
 				PRODUCT_NAME = "$(TARGET_NAME)";

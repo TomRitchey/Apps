@@ -65,11 +65,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOh-Jp-clk">
-                                <rect key="frame" x="279" y="143" width="42" height="21"/>
+                                <rect key="frame" x="279" y="155" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5k-ir-BxB">
+                                <rect key="frame" x="0.0" y="384" width="600" height="216"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="CN3-CY-PO0"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -80,6 +86,8 @@
                             <constraint firstItem="5h1-9X-61k" firstAttribute="leading" secondItem="EbC-KF-TeI" secondAttribute="trailing" constant="87" id="NWa-E9-RGC"/>
                             <constraint firstItem="sQu-Dz-hge" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="Nj2-gb-uH8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5h1-9X-61k" secondAttribute="trailing" constant="14" id="SUy-Yw-1wh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="i5k-ir-BxB" secondAttribute="bottom" id="U0c-jz-Dr2"/>
+                            <constraint firstItem="i5k-ir-BxB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="VbU-hS-aI2"/>
                             <constraint firstItem="sQu-Dz-hge" firstAttribute="baseline" secondItem="51X-aY-tSs" secondAttribute="baseline" id="Yce-Ek-5nM"/>
                             <constraint firstItem="EbC-KF-TeI" firstAttribute="baseline" secondItem="5h1-9X-61k" secondAttribute="baseline" id="bFk-wI-tir"/>
                             <constraint firstAttribute="trailingMargin" secondItem="51X-aY-tSs" secondAttribute="trailing" constant="8" id="d3H-RN-Y11"/>
@@ -87,9 +95,10 @@
                             <constraint firstItem="EbC-KF-TeI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="14" id="iH6-13-RNL"/>
                             <constraint firstItem="51X-aY-tSs" firstAttribute="leading" secondItem="sQu-Dz-hge" secondAttribute="trailing" constant="91" id="iWn-qN-B8G"/>
                             <constraint firstItem="51X-aY-tSs" firstAttribute="leading" secondItem="sQu-Dz-hge" secondAttribute="trailing" constant="91" id="k4i-5i-A3H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="i5k-ir-BxB" secondAttribute="trailing" constant="-20" id="nlx-ad-A44"/>
                             <constraint firstItem="lOh-Jp-clk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s4f-qY-9fi"/>
                             <constraint firstItem="51X-aY-tSs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="uSn-bc-a3o"/>
-                            <constraint firstItem="lOh-Jp-clk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="182" id="vYl-mk-lEm"/>
+                            <constraint firstItem="lOh-Jp-clk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="110" id="vYl-mk-lEm"/>
                             <constraint firstItem="sQu-Dz-hge" firstAttribute="centerX" secondItem="EbC-KF-TeI" secondAttribute="centerX" id="zLr-iR-yVa"/>
                         </constraints>
                         <variation key="default">
@@ -105,7 +114,10 @@
                     </view>
                     <connections>
                         <outlet property="denominatorValue" destination="5h1-9X-61k" id="kN6-w0-9yW"/>
+                        <outlet property="numberOne" destination="sQu-Dz-hge" id="gAR-uj-E6d"/>
+                        <outlet property="numberTwo" destination="51X-aY-tSs" id="6qF-d6-DsB"/>
                         <outlet property="numeratorValue" destination="EbC-KF-TeI" id="Tkr-rK-uDd"/>
+                        <outlet property="operationPicker" destination="i5k-ir-BxB" id="vxA-jC-AXz"/>
                         <outlet property="resultLabel" destination="lOh-Jp-clk" id="8Vb-dx-c3K"/>
                     </connections>
                 </viewController>

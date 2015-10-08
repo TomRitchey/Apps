@@ -12,11 +12,14 @@
 {
     int numerator;
     int denominator;
+    int operation;
     
 }
 -(void)showResults;
 -(float)getResults;
--(void)setNumerator:(int)n;
--(void)setDenominator:(int)d;
+-(void)setNumerator:(int)n setDenominator:(int)d;
+-(int)numerator;
+-(int)denominator;
+-(void)sign:(char)sgn;
 
 @end
