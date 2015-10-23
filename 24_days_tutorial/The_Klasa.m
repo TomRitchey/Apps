@@ -10,6 +10,22 @@
 
 @implementation The_Klasa
 
+-(id)init{
+    if (!(self = [super init]))
+        return nil;
+    numerator = 0;
+    denominator = 0;
+    return self;
+}
+
+-(id)initWithNumerator:(NSInteger)num overDenominator:(NSInteger)denom {
+    if (!(self = [super init]))
+        return nil;
+    numerator = num;
+    denominator = denom;
+    return self;
+}
+
 - (void)showResults {
     NSLog(@"This is a fraction with a value of %d/%d", numerator, denominator);
 }
@@ -47,19 +63,24 @@
     }
 }
 
--(NSString*)returnStringFraction{
+- (void)reduce {
     int u = numerator;
     int v = denominator;
     int temp = 0;
-
+    
     while (v != 0) {
         temp = u % v;
         u = v;
         v = temp;
     }
     
-    
-    return [NSString stringWithFormat:@"%d / %d", numerator/u, denominator/u];
+    numerator /= u;
+    denominator /= u;
+}
+
+-(NSString*)returnStringFraction{
+    [self reduce];
+    return [NSString stringWithFormat:@"%d / %d", numerator, denominator];
 }
 
 -(int)numerator{
@@ -101,11 +122,15 @@
     NSInteger resultDenom = frac1.denominator * frac2.denominator;
 //    NSLog(@"num %i den %i num1 %i den1 %i num2 %i den2 %i",resultNum,resultDenom,frac1.numerator,frac1.denominator,frac2.numerator,frac2.denominator);
     
-    
+    if(frac1.denominator == 0){
+        return frac2;
+    }else if(frac2.denominator == 0){
+        return frac1;
+    }else{
     [result setNumerator:resultNum setDenominator:resultDenom];
     //[result reduce];
     
-    return result;
+        return result;}
 }
 
 @end

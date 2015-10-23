@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+#import "The_Klasa.h"
+#import "MixedNumber.h"
 
 @interface ViewController : UIViewController
 
+-(NSString*)returnResultLabelName;
+-(void)setResultLabelName:(NSString*)input;
 
 @end
 

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "The_Klasa.h"
+
 
 @interface ViewController ()<UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
 @property (strong, nonatomic) IBOutlet UILabel *resultLabel;
@@ -33,6 +33,8 @@
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *denominator1TopConstraint;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *resultLabelTopConstraint;
 
+@property UIScreenEdgePanGestureRecognizer *edgePanGestureRecognizer;
+@property UIPercentDrivenInteractiveTransition *percentDrivenInteractiveTransition;
 
 
 
@@ -48,28 +50,75 @@ NSString* labelResultFront = @"The result equals ";
 The_Klasa* klasa;
 UIInterfaceOrientation interfaceOrientation;
 bool keyboardIsHidden = YES;
+bool viewLoadFrstTime = YES;
 
 - (void)viewDidLoad {
+    //if(viewLoadFrstTime)
     [super viewDidLoad];
     //if(klasa){
-    self.picker_options = [[NSArray alloc] initWithObjects:@"add",@"substract",@"multiply",@"divide",@"add fractions" , nil];
-       klasa = [[The_Klasa alloc] init];
+    [self loadingView:YES];
     
-    self.resultLabel.text = labelResultFront;
-    [self.resultLabel resignFirstResponder];
-    [self hideSecondaryFraction:YES];
-
-    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-    [[NSNotificationCenter defaultCenter]
-     addObserver:self selector:@selector(orientationChanged:)
-     name:UIDeviceOrientationDidChangeNotification
-     object:[UIDevice currentDevice]];
-    
-    [klasa setNumerator:3 setDenominator:4];
+    //[klasa setNumerator:3 setDenominator:4];
     //[klasa ];
     [klasa showResults];
-    self.denominatorValue.text=@"j";
+    self.denominatorValue.text=@"0";
+    self.numeratorValue.text=@"0";
+    self.denominator2Value.text=@"0";
+    self.numerator2Value.text=@"0";
+    
+    /*////////////////////////////////
+    
+    MixedNumber *aMixedNum = [[MixedNumber alloc] init];
+    MixedNumber *bMixedNum = [[MixedNumber alloc] init];
+    [aMixedNum setWholeNumber:3 andNumerator:2 overDenominator:4];
+    
+    The_Klasa *bFraction = [[The_Klasa alloc] init];
+    
+    [bFraction setNumerator:1 setDenominator:3];
+    
+    [bMixedNum setWholeNumber:4 andFraction:bFraction];
+    
+    NSLog(@"aMixedNum is"); [aMixedNum display];
+    // Uses Fraction's reduce method on the fractional portion of MixedNumber
+    NSLog(@"After reducing, aMixedNum is"); [aMixedNum reduce]; [aMixedNum display];
+    
+    NSLog(@"Addition: ");
+    [aMixedNum display]; NSLog(@" + "); [bMixedNum display]; NSLog(@" = ");
+    [[MixedNumber addMixedNumber:aMixedNum toMixedNumber:bMixedNum] display];
+    // display is invoked on the return value of the add method
+    
+//    [bFraction relea];
+//    [aMixedNum release];
+//    [bMixedNum release];
+    
+    ////////////////////////////////*/
+    //observer pan edge
+    viewLoadFrstTime = NO;
+    NSLog(@"Should be %@",self);
 }
+
+-(void)loadingView:(BOOL)firstTime{
+    if (firstTime){
+        
+        self.picker_options = [[NSArray alloc] initWithObjects:@"add",@"substract",@"multiply",@"divide",@"add fractions" , nil];
+        klasa = [[The_Klasa alloc] init];
+        self.resultLabel.text = labelResultFront;
+        [self.resultLabel resignFirstResponder];
+        [self hideSecondaryFraction:YES];
+        
+        [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+        [[NSNotificationCenter defaultCenter]
+         addObserver:self selector:@selector(orientationChanged:)
+         name:UIDeviceOrientationDidChangeNotification
+         object:[UIDevice currentDevice]];
+        
+        self.edgePanGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleScreenEdgePanGesture:)];
+        self.edgePanGestureRecognizer.edges = UIRectEdgeRight;
+        [self.view addGestureRecognizer:self.edgePanGestureRecognizer];
+    }else{
+    }
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -78,7 +127,20 @@ bool keyboardIsHidden = YES;
 
 
 
+- (void)handleScreenEdgePanGesture:(UIScreenEdgePanGestureRecognizer *)sender{
+    [self goToSecondaryView];
+}
 
+-(void)goToSecondaryView{
+//    UIStoryboard *currentStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    UIViewController *vc = [currentStoryBoard instantiateViewControllerWithIdentifier:@"SideView"];
+    @autoreleasepool {
+    UIViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SideView"];
+
+    vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:vc animated:YES completion:nil];
+    }
+}
 
 -(IBAction)textFieldReturn:(id)sender
 {
@@ -96,7 +158,7 @@ bool keyboardIsHidden = YES;
 }
 - (IBAction)keyboardAppeared:(id)sender {
     keyboardIsHidden = NO;
-    if(!UIInterfaceOrientationIsPortrait(interfaceOrientation)){
+    if(!UIInterfaceOrientationIsPortrait(interfaceOrientation)&& [klasa operation]==4){
         self.numerator1TopConstraint.constant = 8;
         self.denominator1TopConstraint.constant = 8;}
 }
@@ -145,6 +207,14 @@ bool keyboardIsHidden = YES;
 
 -(void)resultLabelRefresh:(NSString*)input{
         self.resultLabel.text = [NSString stringWithFormat:@"%@ %@",labelResultFront,input];
+}
+
+
+-(void)setResultLabelName:(NSString*)input{
+        self.resultLabel.text = [NSString stringWithFormat:@" %@",input];
+}
+-(NSString*)returnResultLabelName{
+    return self.resultLabel.text;
 }
 
 -(void)labelsName:(NSInteger)row{
@@ -209,4 +279,5 @@ bool keyboardIsHidden = YES;
         
     }
 }
+
 @end

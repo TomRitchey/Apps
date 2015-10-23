@@ -14,11 +14,13 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    
     return YES;
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -28,10 +30,36 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    
+//    UIWindow *window=[UIApplication sharedApplication].keyWindow;
+//    UIViewController *root = [window rootViewController];
+//    UIStoryboard *storyboard = root.storyboard;
+//    
+//    ViewController *vcc = (ViewController *)[storyboard  instantiateViewControllerWithIdentifier:@"MainView"];
+//    
+//    
+//    NSLog(@"%@",vcc);
+//    
+//    [vcc setResultLabelName:[NSString stringWithFormat:@"You are back!!"]];
+//    NSLog(@"%@",[vcc returnResultLabelName]);
+//    
+//  NSLog(@"Is %@",vcc);
+    
+    //[UIApplication sharedApplication].keyWindow.visibleViewController;
+    
+    ViewController *mainViewController = (ViewController *)self.window.rootViewController;
+   
+   // ViewController *mainViewController2 = self.topViewController;
+    
+    
+    [mainViewController setResultLabelName:[NSString stringWithFormat:@"You are back!!"]];
+    NSLog(@"%@",[mainViewController returnResultLabelName]);
+    NSLog(@"%@",mainViewController);
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
