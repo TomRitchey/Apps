@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A7112BD31BD3E6F500862A3A /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = A7112BD21BD3E6F500862A3A /* ViewController2.m */; settings = {ASSET_TAGS = (); }; };
-		A7112BD61BD4FBA400862A3A /* NSArray-RandomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A7112BD51BD4FBA300862A3A /* NSArray-RandomObject.m */; settings = {ASSET_TAGS = (); }; };
-		A7112BE41BD6CA5A00862A3A /* Ted+2_feb411_5675708.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A7112BE31BD6CA5A00862A3A /* Ted+2_feb411_5675708.jpg */; settings = {ASSET_TAGS = (); }; };
+		A7112BD31BD3E6F500862A3A /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = A7112BD21BD3E6F500862A3A /* ViewController2.m */; };
+		A7112BD61BD4FBA400862A3A /* NSArray-RandomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A7112BD51BD4FBA300862A3A /* NSArray-RandomObject.m */; };
 		A7589E871BC3C6180058076F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7589E861BC3C6180058076F /* main.m */; };
 		A7589E8A1BC3C6180058076F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7589E891BC3C6180058076F /* AppDelegate.m */; };
 		A7589E8D1BC3C6180058076F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7589E8C1BC3C6180058076F /* ViewController.m */; };
@@ -18,8 +17,9 @@
 		A7589E951BC3C6180058076F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7589E931BC3C6180058076F /* LaunchScreen.storyboard */; };
 		A7589EA01BC3C6180058076F /* _4_days_tutorialTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7589E9F1BC3C6180058076F /* _4_days_tutorialTests.m */; };
 		A7589EAB1BC3C6190058076F /* _4_days_tutorialUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7589EAA1BC3C6190058076F /* _4_days_tutorialUITests.m */; };
-		A7589EBA1BC3C6DC0058076F /* The_Klasa.m in Sources */ = {isa = PBXBuildFile; fileRef = A7589EB91BC3C6DC0058076F /* The_Klasa.m */; settings = {ASSET_TAGS = (); }; };
-		A7DA1EA01BCFCFDB00A747F0 /* MixedNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = A7DA1E9F1BCFCFDB00A747F0 /* MixedNumber.m */; settings = {ASSET_TAGS = (); }; };
+		A7589EBA1BC3C6DC0058076F /* The_Klasa.m in Sources */ = {isa = PBXBuildFile; fileRef = A7589EB91BC3C6DC0058076F /* The_Klasa.m */; };
+		A7CA13921BDF8AE10012558B /* deal_with_it_glasses_by_stewartisme_d5tuvbk_by_b0ss23-d8hr777.png in Resources */ = {isa = PBXBuildFile; fileRef = A7CA13911BDF8AE10012558B /* deal_with_it_glasses_by_stewartisme_d5tuvbk_by_b0ss23-d8hr777.png */; };
+		A7DA1EA01BCFCFDB00A747F0 /* MixedNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = A7DA1E9F1BCFCFDB00A747F0 /* MixedNumber.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,20 +37,6 @@
 			remoteGlobalIDString = A7589E811BC3C6180058076F;
 			remoteInfo = 24_days_tutorial;
 		};
-		A7589F191BC3DDAE0058076F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A7589E7A1BC3C6170058076F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A7589EFF1BC3DDAD0058076F;
-			remoteInfo = kurwajapierdole;
-		};
-		A7589F241BC3DDAF0058076F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A7589E7A1BC3C6170058076F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A7589EFF1BC3DDAD0058076F;
-			remoteInfo = kurwajapierdole;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -58,10 +44,6 @@
 		A7112BD21BD3E6F500862A3A /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 		A7112BD41BD4FBA300862A3A /* NSArray-RandomObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray-RandomObject.h"; sourceTree = "<group>"; };
 		A7112BD51BD4FBA300862A3A /* NSArray-RandomObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray-RandomObject.m"; sourceTree = "<group>"; };
-		A7112BE01BD6C68800862A3A /* kurwajapierdole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kurwajapierdole.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7112BE11BD6C68800862A3A /* kurwajapierdoleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kurwajapierdoleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7112BE21BD6C68800862A3A /* kurwajapierdoleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kurwajapierdoleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7112BE31BD6CA5A00862A3A /* Ted+2_feb411_5675708.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ted+2_feb411_5675708.jpg"; sourceTree = "<group>"; };
 		A7589E861BC3C6180058076F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A7589E881BC3C6180058076F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A7589E891BC3C6180058076F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -80,6 +62,7 @@
 		A7589F331BC3E41D0058076F /* 24_days_tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 24_days_tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7589F341BC3E41D0058076F /* 24_days_tutorialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 24_days_tutorialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7589F351BC3E41D0058076F /* 24_days_tutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 24_days_tutorialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7CA13911BDF8AE10012558B /* deal_with_it_glasses_by_stewartisme_d5tuvbk_by_b0ss23-d8hr777.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deal_with_it_glasses_by_stewartisme_d5tuvbk_by_b0ss23-d8hr777.png"; sourceTree = "<group>"; };
 		A7DA1E9E1BCFCFDB00A747F0 /* MixedNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixedNumber.h; sourceTree = "<group>"; };
 		A7DA1E9F1BCFCFDB00A747F0 /* MixedNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixedNumber.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,43 +89,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A7589EFD1BC3DDAD0058076F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A7589F151BC3DDAE0058076F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A7589F201BC3DDAF0058076F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		A7589E791BC3C6170058076F = {
 			isa = PBXGroup;
 			children = (
-				A7112BE31BD6CA5A00862A3A /* Ted+2_feb411_5675708.jpg */,
+				A7CA13911BDF8AE10012558B /* deal_with_it_glasses_by_stewartisme_d5tuvbk_by_b0ss23-d8hr777.png */,
 				A7589E841BC3C6180058076F /* 24_days_tutorial */,
 				A7589E9E1BC3C6180058076F /* 24_days_tutorialTests */,
 				A7589EA91BC3C6190058076F /* 24_days_tutorialUITests */,
 				A7589F331BC3E41D0058076F /* 24_days_tutorial.app */,
 				A7589F341BC3E41D0058076F /* 24_days_tutorialTests.xctest */,
 				A7589F351BC3E41D0058076F /* 24_days_tutorialUITests.xctest */,
-				A7112BE01BD6C68800862A3A /* kurwajapierdole.app */,
-				A7112BE11BD6C68800862A3A /* kurwajapierdoleTests.xctest */,
-				A7112BE21BD6C68800862A3A /* kurwajapierdoleUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -252,59 +211,6 @@
 			productReference = A7589F351BC3E41D0058076F /* 24_days_tutorialUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		A7589EFF1BC3DDAD0058076F /* kurwajapierdole */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A7589F2A1BC3DDAF0058076F /* Build configuration list for PBXNativeTarget "kurwajapierdole" */;
-			buildPhases = (
-				A7589EFC1BC3DDAD0058076F /* Sources */,
-				A7589EFD1BC3DDAD0058076F /* Frameworks */,
-				A7589EFE1BC3DDAD0058076F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = kurwajapierdole;
-			productName = kurwajapierdole;
-			productReference = A7112BE01BD6C68800862A3A /* kurwajapierdole.app */;
-			productType = "com.apple.product-type.application";
-		};
-		A7589F171BC3DDAE0058076F /* kurwajapierdoleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A7589F2D1BC3DDAF0058076F /* Build configuration list for PBXNativeTarget "kurwajapierdoleTests" */;
-			buildPhases = (
-				A7589F141BC3DDAE0058076F /* Sources */,
-				A7589F151BC3DDAE0058076F /* Frameworks */,
-				A7589F161BC3DDAE0058076F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A7589F1A1BC3DDAE0058076F /* PBXTargetDependency */,
-			);
-			name = kurwajapierdoleTests;
-			productName = kurwajapierdoleTests;
-			productReference = A7112BE11BD6C68800862A3A /* kurwajapierdoleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		A7589F221BC3DDAF0058076F /* kurwajapierdoleUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A7589F301BC3DDAF0058076F /* Build configuration list for PBXNativeTarget "kurwajapierdoleUITests" */;
-			buildPhases = (
-				A7589F1F1BC3DDAF0058076F /* Sources */,
-				A7589F201BC3DDAF0058076F /* Frameworks */,
-				A7589F211BC3DDAF0058076F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A7589F251BC3DDAF0058076F /* PBXTargetDependency */,
-			);
-			name = kurwajapierdoleUITests;
-			productName = kurwajapierdoleUITests;
-			productReference = A7112BE21BD6C68800862A3A /* kurwajapierdoleUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -326,17 +232,6 @@
 						CreatedOnToolsVersion = 7.0;
 						TestTargetID = A7589E811BC3C6180058076F;
 					};
-					A7589EFF1BC3DDAD0058076F = {
-						CreatedOnToolsVersion = 7.0;
-					};
-					A7589F171BC3DDAE0058076F = {
-						CreatedOnToolsVersion = 7.0;
-						TestTargetID = A7589EFF1BC3DDAD0058076F;
-					};
-					A7589F221BC3DDAF0058076F = {
-						CreatedOnToolsVersion = 7.0;
-						TestTargetID = A7589EFF1BC3DDAD0058076F;
-					};
 				};
 			};
 			buildConfigurationList = A7589E7D1BC3C6180058076F /* Build configuration list for PBXProject "24_days_tutorial" */;
@@ -355,9 +250,6 @@
 				A7589E811BC3C6180058076F /* 24_days_tutorial */,
 				A7589E9A1BC3C6180058076F /* 24_days_tutorialTests */,
 				A7589EA51BC3C6190058076F /* 24_days_tutorialUITests */,
-				A7589EFF1BC3DDAD0058076F /* kurwajapierdole */,
-				A7589F171BC3DDAE0058076F /* kurwajapierdoleTests */,
-				A7589F221BC3DDAF0058076F /* kurwajapierdoleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -367,8 +259,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7112BE41BD6CA5A00862A3A /* Ted+2_feb411_5675708.jpg in Resources */,
 				A7589E951BC3C6180058076F /* LaunchScreen.storyboard in Resources */,
+				A7CA13921BDF8AE10012558B /* deal_with_it_glasses_by_stewartisme_d5tuvbk_by_b0ss23-d8hr777.png in Resources */,
 				A7589E921BC3C6180058076F /* Assets.xcassets in Resources */,
 				A7589E901BC3C6180058076F /* Main.storyboard in Resources */,
 			);
@@ -382,27 +274,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A7589EA41BC3C6190058076F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A7589EFE1BC3DDAD0058076F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A7589F161BC3DDAE0058076F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A7589F211BC3DDAF0058076F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -442,27 +313,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A7589EFC1BC3DDAD0058076F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A7589F141BC3DDAE0058076F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A7589F1F1BC3DDAF0058076F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -475,16 +325,6 @@
 			isa = PBXTargetDependency;
 			target = A7589E811BC3C6180058076F /* 24_days_tutorial */;
 			targetProxy = A7589EA71BC3C6190058076F /* PBXContainerItemProxy */;
-		};
-		A7589F1A1BC3DDAE0058076F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A7589EFF1BC3DDAD0058076F /* kurwajapierdole */;
-			targetProxy = A7589F191BC3DDAE0058076F /* PBXContainerItemProxy */;
-		};
-		A7589F251BC3DDAF0058076F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A7589EFF1BC3DDAD0058076F /* kurwajapierdole */;
-			targetProxy = A7589F241BC3DDAF0058076F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -672,80 +512,6 @@
 			};
 			name = Release;
 		};
-		A7589F2B1BC3DDAF0058076F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "-";
-				INFOPLIST_FILE = kurwajapierdole/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = s.kurwajapierdole;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		A7589F2C1BC3DDAF0058076F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "-";
-				INFOPLIST_FILE = kurwajapierdole/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = s.kurwajapierdole;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		A7589F2E1BC3DDAF0058076F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = kurwajapierdoleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = s.kurwajapierdoleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kurwajapierdole.app/kurwajapierdole";
-			};
-			name = Debug;
-		};
-		A7589F2F1BC3DDAF0058076F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = kurwajapierdoleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = s.kurwajapierdoleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kurwajapierdole.app/kurwajapierdole";
-			};
-			name = Release;
-		};
-		A7589F311BC3DDAF0058076F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = kurwajapierdoleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = s.kurwajapierdoleUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = kurwajapierdole;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		A7589F321BC3DDAF0058076F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = kurwajapierdoleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = s.kurwajapierdoleUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = kurwajapierdole;
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -781,33 +547,6 @@
 			buildConfigurations = (
 				A7589EB61BC3C6190058076F /* Debug */,
 				A7589EB71BC3C6190058076F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A7589F2A1BC3DDAF0058076F /* Build configuration list for PBXNativeTarget "kurwajapierdole" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A7589F2B1BC3DDAF0058076F /* Debug */,
-				A7589F2C1BC3DDAF0058076F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A7589F2D1BC3DDAF0058076F /* Build configuration list for PBXNativeTarget "kurwajapierdoleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A7589F2E1BC3DDAF0058076F /* Debug */,
-				A7589F2F1BC3DDAF0058076F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A7589F301BC3DDAF0058076F /* Build configuration list for PBXNativeTarget "kurwajapierdoleUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A7589F311BC3DDAF0058076F /* Debug */,
-				A7589F321BC3DDAF0058076F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

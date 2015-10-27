@@ -59,11 +59,14 @@ UIInterfaceOrientation interfaceOrientation_2;
     //[self.sectionView addSubview:self.colorsView];
     //self.sectionView.contentSize = self.colorsView.frame.size;
     //*******obserwator do zmiany orientacji****
+    static dispatch_once_t obsvr;
+    dispatch_once(&obsvr, ^{
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     [[NSNotificationCenter defaultCenter]
      addObserver:self selector:@selector(orientationChanged:)
      name:UIDeviceOrientationDidChangeNotification
      object:[UIDevice currentDevice]];
+    });
     //*******************************************
     [self selectSubView:1];
     //[self selectSubView:0];
@@ -88,8 +91,11 @@ UIInterfaceOrientation interfaceOrientation_2;
 }
 
 -(void)goToPrimaryView{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
     UIViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MainView"];
     vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    self.view.window.rootViewController = vc;
     [self presentViewController:vc animated:YES completion:nil];
 }
 - (IBAction)sectionChanged:(id)sender {
@@ -126,10 +132,9 @@ UIInterfaceOrientation interfaceOrientation_2;
         [self.sectionView addSubview:self.progressView];
         self.sectionView.contentSize = self.progressView.frame.size;
     }else{
-        
         NSString *ImageURL = @"https://www.google.pl/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png";
         
-        UIImage * myImage = [UIImage imageNamed: @"Ted+2_feb411_5675708.jpg"];
+        UIImage * myImage = [UIImage imageNamed: @"deal_with_it_glasses_by_stewartisme_d5tuvbk_by_b0ss23-d8hr777.png"];
         
         self.imageView.image = myImage;
         
@@ -156,8 +161,7 @@ UIInterfaceOrientation interfaceOrientation_2;
 
 
 -(void)orientationChanged:(NSNotification *)note{
-    interfaceOrientation_2 = [[UIApplication sharedApplication] statusBarOrientation];
-    
+    //interfaceOrientation_2 = [[UIApplication sharedApplication] statusBarOrientation];
     [self selectSubView:currentView];
 }
 

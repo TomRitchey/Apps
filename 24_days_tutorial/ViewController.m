@@ -48,7 +48,7 @@
 @synthesize denominator2Value;
 NSString* labelResultFront = @"The result equals ";
 The_Klasa* klasa;
-UIInterfaceOrientation interfaceOrientation;
+//UIInterfaceOrientation interfaceOrientation;
 bool keyboardIsHidden = YES;
 bool viewLoadFrstTime = YES;
 
@@ -106,17 +106,23 @@ bool viewLoadFrstTime = YES;
         [self.resultLabel resignFirstResponder];
         [self hideSecondaryFraction:YES];
         
-        [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-        [[NSNotificationCenter defaultCenter]
-         addObserver:self selector:@selector(orientationChanged:)
-         name:UIDeviceOrientationDidChangeNotification
-         object:[UIDevice currentDevice]];
+       
+        static dispatch_once_t lock;
+        //wykona sie raz
+        dispatch_once(&lock, ^{
+            [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+            [[NSNotificationCenter defaultCenter]
+             addObserver:self selector:@selector(orientationChanged:)
+             name:UIDeviceOrientationDidChangeNotification
+             object:[UIDevice currentDevice]];
+        });
         
         self.edgePanGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleScreenEdgePanGesture:)];
         self.edgePanGestureRecognizer.edges = UIRectEdgeRight;
         [self.view addGestureRecognizer:self.edgePanGestureRecognizer];
     }else{
     }
+    
 }
 
 
@@ -132,14 +138,13 @@ bool viewLoadFrstTime = YES;
 }
 
 -(void)goToSecondaryView{
-//    UIStoryboard *currentStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//    UIViewController *vc = [currentStoryBoard instantiateViewControllerWithIdentifier:@"SideView"];
-    @autoreleasepool {
+   // [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:[UIDevice currentDevice]];
+   // @autoreleasepool {
     UIViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SideView"];
 
     vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:vc animated:YES completion:nil];
-    }
+   // }
 }
 
 -(IBAction)textFieldReturn:(id)sender
@@ -158,7 +163,7 @@ bool viewLoadFrstTime = YES;
 }
 - (IBAction)keyboardAppeared:(id)sender {
     keyboardIsHidden = NO;
-    if(!UIInterfaceOrientationIsPortrait(interfaceOrientation)&& [klasa operation]==4){
+    if(!UIDeviceOrientationIsPortrait([[UIDevice currentDevice] orientation])&& [klasa operation]==4){
         self.numerator1TopConstraint.constant = 8;
         self.denominator1TopConstraint.constant = 8;}
 }
@@ -259,14 +264,13 @@ bool viewLoadFrstTime = YES;
 }
 
 -(void)orientationChanged:(NSNotification *)note{
-     interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
-    
-    if(UIInterfaceOrientationIsPortrait(interfaceOrientation) ){
+    NSLog(@"zmiana orientacji na %ld",(long)[[UIDevice currentDevice] orientation]);
+    if(UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation]) || UIDeviceOrientationIsPortrait([[UIDevice currentDevice] orientation])){
+    if(!UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation]) ){
         self.numerator1TopConstraint.constant = 47;
         self.denominator1TopConstraint.constant = 47;
         self.numerator2TopConstraint.constant = 35;
         self.denominator2TopConstraint.constant = 35;
-        
         //NSLog(@"Portrait");
     }else{
         self.numerator2TopConstraint.constant = 8;
@@ -276,7 +280,7 @@ bool viewLoadFrstTime = YES;
             self.denominator1TopConstraint.constant = 8;
         }
         //NSLog(@"Non portrait");
-        
+    }
     }
 }
 
